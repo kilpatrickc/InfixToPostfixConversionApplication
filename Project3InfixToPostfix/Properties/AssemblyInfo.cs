@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Project3InfixToPostfix")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Project3")]
+[assembly: AssemblyDescription("This projects intention is to convert infix equations into postfix equations")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Project3InfixToPostfix")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("Catherine Kilpatrick")]
+[assembly: AssemblyProduct("Project3: Infix To Postfix Conversion")]
+[assembly: AssemblyCopyright("Copyright © Catherine Kilpatrick 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
