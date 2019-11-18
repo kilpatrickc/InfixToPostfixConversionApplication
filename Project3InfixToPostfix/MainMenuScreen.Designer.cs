@@ -35,16 +35,16 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutInfixToPoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.infixLbl = new System.Windows.Forms.Label();
             this.postfixLbl = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.InfixExpressionTextBox = new System.Windows.Forms.TextBox();
+            this.PostfixTextBox = new System.Windows.Forms.TextBox();
             this.textboxsPanel = new System.Windows.Forms.Panel();
             this.generatePostfixBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.mainscreenButtons = new System.Windows.Forms.Panel();
+            this.fileContentsListBox = new System.Windows.Forms.ListBox();
             this.mainMenuStrip.SuspendLayout();
             this.textboxsPanel.SuspendLayout();
             this.mainscreenButtons.SuspendLayout();
@@ -74,14 +74,14 @@
             // inputInfixDataFileToolStripMenuItem
             // 
             this.inputInfixDataFileToolStripMenuItem.Name = "inputInfixDataFileToolStripMenuItem";
-            this.inputInfixDataFileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.inputInfixDataFileToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.inputInfixDataFileToolStripMenuItem.Text = "Input Infix Data File";
             this.inputInfixDataFileToolStripMenuItem.Click += new System.EventHandler(this.inputInfixDataFileToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -99,20 +99,6 @@
             this.aboutInfixToPoToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
             this.aboutInfixToPoToolStripMenuItem.Text = "About Infix to Postfix";
             this.aboutInfixToPoToolStripMenuItem.Click += new System.EventHandler(this.aboutInfixToPoToolStripMenuItem_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(40, 20);
-            this.textBox1.MinimumSize = new System.Drawing.Size(700, 250);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(700, 250);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // infixLbl
             // 
@@ -138,34 +124,35 @@
             this.postfixLbl.TabIndex = 4;
             this.postfixLbl.Text = "Postfix Expression";
             // 
-            // textBox2
+            // InfixExpressionTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.InfixExpressionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(201, 287);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(539, 22);
-            this.textBox2.TabIndex = 3;
+            this.InfixExpressionTextBox.Location = new System.Drawing.Point(201, 287);
+            this.InfixExpressionTextBox.Name = "InfixExpressionTextBox";
+            this.InfixExpressionTextBox.Size = new System.Drawing.Size(539, 22);
+            this.InfixExpressionTextBox.TabIndex = 3;
             // 
-            // textBox3
+            // PostfixTextBox
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.PostfixTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(201, 320);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(539, 22);
-            this.textBox3.TabIndex = 5;
+            this.PostfixTextBox.Location = new System.Drawing.Point(201, 320);
+            this.PostfixTextBox.Name = "PostfixTextBox";
+            this.PostfixTextBox.ReadOnly = true;
+            this.PostfixTextBox.Size = new System.Drawing.Size(539, 22);
+            this.PostfixTextBox.TabIndex = 5;
             // 
             // textboxsPanel
             // 
             this.textboxsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textboxsPanel.Controls.Add(this.textBox3);
-            this.textboxsPanel.Controls.Add(this.textBox2);
+            this.textboxsPanel.Controls.Add(this.fileContentsListBox);
+            this.textboxsPanel.Controls.Add(this.PostfixTextBox);
+            this.textboxsPanel.Controls.Add(this.InfixExpressionTextBox);
             this.textboxsPanel.Controls.Add(this.postfixLbl);
             this.textboxsPanel.Controls.Add(this.infixLbl);
-            this.textboxsPanel.Controls.Add(this.textBox1);
             this.textboxsPanel.Location = new System.Drawing.Point(0, 25);
             this.textboxsPanel.Name = "textboxsPanel";
             this.textboxsPanel.Size = new System.Drawing.Size(780, 360);
@@ -181,6 +168,7 @@
             this.generatePostfixBtn.TabIndex = 6;
             this.generatePostfixBtn.Text = "Generate Postfix";
             this.generatePostfixBtn.UseVisualStyleBackColor = true;
+            this.generatePostfixBtn.Click += new System.EventHandler(this.generatePostfixBtn_Click);
             // 
             // clearBtn
             // 
@@ -192,6 +180,7 @@
             this.clearBtn.TabIndex = 7;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // exitBtn
             // 
@@ -216,6 +205,17 @@
             this.mainscreenButtons.Size = new System.Drawing.Size(780, 65);
             this.mainscreenButtons.TabIndex = 9;
             // 
+            // fileContentsListBox
+            // 
+            this.fileContentsListBox.FormattingEnabled = true;
+            this.fileContentsListBox.ItemHeight = 16;
+            this.fileContentsListBox.Location = new System.Drawing.Point(40, 20);
+            this.fileContentsListBox.MinimumSize = new System.Drawing.Size(700, 250);
+            this.fileContentsListBox.Name = "fileContentsListBox";
+            this.fileContentsListBox.Size = new System.Drawing.Size(700, 244);
+            this.fileContentsListBox.TabIndex = 6;
+            this.fileContentsListBox.SelectedIndexChanged += new System.EventHandler(this.fileContentsListBox_SelectedIndexChanged);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,6 +228,7 @@
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project 3 - Infix to Postfix, Catherine Kilpatrick";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainScreen_FormClosing);
             this.mainMenuStrip.ResumeLayout(false);
@@ -248,16 +249,16 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutInfixToPoToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label infixLbl;
         private System.Windows.Forms.Label postfixLbl;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox InfixExpressionTextBox;
+        private System.Windows.Forms.TextBox PostfixTextBox;
         private System.Windows.Forms.Panel textboxsPanel;
         private System.Windows.Forms.Button generatePostfixBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Panel mainscreenButtons;
+        private System.Windows.Forms.ListBox fileContentsListBox;
     }
 }
 

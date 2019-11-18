@@ -66,6 +66,7 @@
     <Compile Include="SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Toolbox.cs" />
     <EmbeddedResource Include="AboutProject3.resx">
       <DependentUpon>AboutProject3.cs</DependentUpon>
     </EmbeddedResource>

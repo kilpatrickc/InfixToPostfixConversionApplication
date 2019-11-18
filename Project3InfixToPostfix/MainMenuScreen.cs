@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace Project3InfixToPostfix
         public MainScreen()
         {
             InitializeComponent();
+            this.Text = Application.ProductName+", "+Application.CompanyName;
         }
 
         private void aboutInfixToPoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace Project3InfixToPostfix
 
         private void inputInfixDataFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fileContentsListBox.DataSource = Toolbox.GetSentencesFromFile();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +59,22 @@ namespace Project3InfixToPostfix
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fileContentsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InfixExpressionTextBox.Text = fileContentsListBox.SelectedItem.ToString();
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            InfixExpressionTextBox.Text = "";
+            PostfixTextBox.Text = "";
+        }
+
+        private void generatePostfixBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
