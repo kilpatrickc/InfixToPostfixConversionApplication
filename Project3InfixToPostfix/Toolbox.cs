@@ -72,7 +72,6 @@ namespace Project3InfixToPostfix
                 var result = dlg.ShowDialog();
 
                 string extension = Path.GetExtension(dlg.FileName);
-                Console.WriteLine(extension);
 
 
                 if (result == DialogResult.OK && (extension == ".txt" || extension == ".text"))
